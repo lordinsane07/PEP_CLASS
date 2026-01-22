@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        height: 400px;
+        width: 400px;
+        border: 2px solid black;
+        background-color: red;
+        position:relative;
+        left: 400px;
+        padding: 5px;
+    }
+    .box{
+        height: 30px;
+        width: 200px;
+        padding-bottom: 100px;
+        background-color: yellowgreen;
+        position: absolute;
+        
+    }
+    .box>p:nth-child(1){
+        background-color: aqua;
+    }
+    .box>p:nth-child(2){
+        background-color: blue;
+    }
+</style>
+<body>
+    <div id="container">
+    <div class="box">
+        <p>first child</p>
+    <p>second child</p>
+    <p>third child</p>
+</div>
+    </div>
+</body>
+</html>
