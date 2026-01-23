@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        margin: 450px;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,100px);
+        gap: 30px;
+        width: 500px;
+        border: 2px solid bisque;
+        padding:150px ;
+    }
+    .container>div{ 
+        width: 100px;
+        height: 100px;
+        justify-content:space-around;
+        align-items: center;
+        display: flex;
+        background-color: aquamarine;
+        border:1px solid black;
+        text-align: center;
+    }
+    .container>div:nth-child(5){
+        background-color:aqua;
+    }
+    .container>div:nth-child(odd){
+        background-color: blueviolet;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>box-1</div>
+        <div>box-2</div>
+        <div>box-3</div>
+        <div>box-4</div>
+        <div>box-5</div>
+        <div>box-6</div>
+        <div>box-7</div>
+        <div>box-8</div>
+        <div>box-9</div>
+        <div>box-10</div>
+        <div>box-11</div>
+        <div>box-12</div>
+    </div>
+</body>
+</html>

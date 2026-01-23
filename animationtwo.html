@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            border:1px solid black;
+            margin:200px 300px 250px 250px;
+                position: relative;
+                padding: 50px;
+              display: flex;
+              justify-content: center;
+        }
+        #box1{
+        position: absolute;
+            height: 50px;
+            width: 50px;
+            border:1px solid black;
+            transition: transform 3s,background-color 4s ,border-radius 5s;
+             background-image: url("https://tse3.mm.bing.net/th/id/OIP._qykg9b7YTcy4t0wGDxlWgHaEn?rs=1&pid=ImgDetMain&o=7&rm=3");
+            background-size: cover;
+            
+        }
+        
+        #box1:hover{
+   transform: translateX(200px) rotate(45deg) scale(2);
+             content: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Pictures-3840x2160.jpg");
+            background-size: cover;
+        }
+       
+    </style>
+</head>
+<body>
+   <div id="box">
+    <div id="box1">
+    </div>
+   </div> 
+</body>
+</html>
