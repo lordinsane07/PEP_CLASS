@@ -1,0 +1,15 @@
+IN VAR WECAN DO REASSIGNMENT and redeclaration
+
+var firstname;
+firstname="Mrittick Deb";
+firstname="A";
+var firstname="John";
+
+hosting
+
+In let we can do REASSIGNMENT but not redeclaration
+
+in const
+const name; // notpsible
+it needs to be initialized const name="B";
+  
