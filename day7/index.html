@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!--
+        <div id="Parent"><h1>I am a div tag</h1></div>
+        
+        <p class="red">I am a p tag-1</p>
+        <p class="red">I am a p tag-2</p>
+        <p class="red">I am a p tag-3</p>
+        <p class="red">I am a p tag-4</p>
+        <p class="red">I am a p tag-5</p>  -->
+
+
+        <div id="container"></div>
+</body>
+</html>
+
+<script>
+        let container=document.getElementById("container");
+    container.style.border="2px solid red";
+    container.style.height="70vh";
+container.style.width="100%"
+container.style.display="flex";
+container.style.justifyContent="center";
+container.style.alignItems="center";
+container.style.gap="20px";
+for(let i=1;i<=5;i++){
+let div=document.createElement("div");
+div.style.height="300px";
+div.style.width="300px";
+div.style.border="1px solid black";
+div.style.display="flex";
+div.style.justifyContent="center"
+div.style.alignItems="center"
+div.style.flexDirection="column"
+div.style.borderRadius="20px"
+let img=document.createElement("img");
+img.src=`https://tse2.mm.bing.net/th/id/OIP.RJc_kOxD_sQn-Za1N50zCgHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3`
+img.style.width="130px"
+let h1=document.createElement("h1");
+h1.innerText=`image${i}`
+div.append(img,h1)
+container.appendChild(div);
+document.body.appendChild(container);
+}                                                                      
+   /*
+    let div=document.getElementById("Parent");
+    console.log(div)//html collection is an array-like object
+
+    let pTag=document.getElementsByClassName("red");
+    console.log(pTag)
+
+    let tag=document.getElementsByTagName("p")
+    console.log(tag)
+    let value=document.querySelector(".red")
+    console.log(value)
+
+    let value1=document.querySelectorAll("p")//nodelist is an array wecan use one higherorde fucmtoin for each eiht it  
+    console.log(value1)
+   // let first=value1[1]
+    value1[1].style.color="red";
+    value1[1].style.fontSize="20px";
+    value1.forEach((item,ind)=>{
+        if(ind%2===0)  item.style.color="red";
+        else item.style.color="green";
+    })
+       let h1 = document.querySelector("#Parent > h1");
+h1.style.color = "blue";   
+let parent=document.createElement("div");
+parent.id="Parent";
+parent.innerText="I am the parent";
+parent.innerHTML="<h1>I am the child of parent</h1>"
+//document.body.appendChild(parent);
+let child=document.createElement("h1");
+child.id="Child";
+child.innerText="SECOND CHILD";
+document.body.append(parent,child);
+*/
+
+</script>
+
+
+
+
+
+
