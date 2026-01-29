@@ -6,50 +6,81 @@
     <title>Document</title>
 </head>
 <style>
-        .container{
-            border: 4px solid black;
-            height: 250px;   
-        width: 150px;
-            
+       .container {
+            border: 3px solid black;
+            width: 160px;
+            padding: 5px;
         }
-        .display{
-            border: 0.5px solid black ;
-            padding-bottom: 100px;
+
+        #display {
+            width: 100%;
+            height: 40px;
+            font-size: 18px;
+            text-align: right;
+            margin-bottom: 5px;
+            box-sizing: border-box;
         }
-        button{
-            padding-bottom: 10px;
-            margin-top: 2px;
-                margin-bottom: 2px
+
+        .col {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 4px;
         }
-        .col{
-            padding: auto;
-            gap: 90px;
-          
+
+        button {
+            height: 35px;
+            font-size: 16px;
+            cursor: pointer;
         }
 </style>
 <body>
     <div class="container">
-            <div class="display">
+        
+            <input type="text" id="display" disabled aria-label="Calculator display">
+  
 
-            </div>
                 <div class="col">
-                    <button class="buttons" id="id1">1</button>
-                    <button class="buttons" id="id2">2</button>
-                    <button class="buttons" id="id3">3</button>
-                    <button class="buttons" id="id4">4</button>
-                    <button class="buttons" id="id5">5</button>
-                    <button class="buttons" id="id6">6</button>
-                    <button class="buttons" id="id7">7</button>
-                    <button class="buttons" id="id8">8</button>
-                    <button class="buttons" id="id9">9</button>
-                    <button class="buttons" id="id10">0</button>
-                    <button class="buttons" id="id11">+</button>
-                    <button class="buttons" id="id12">-</button>
-                    <button class="buttons" id="id13">/</button>
-                    <button class="buttons" id="id14">%</button>
-                    <button class="buttons" id="id15">*</button>
-                    <button class="buttons" id="id16">del</button>
+                    <button onclick="press('7')">7</button>
+                    <button onclick="press('8')">8</button>
+                    <button onclick="press('9')">9</button>
+                    <button onclick="press('/')">/</button>
+                    <button onclick="press('4')">4</button>
+                    <button onclick="press('5')">5</button>
+                    <button onclick="press('6')">6</button>
+                    <button onclick="press('*')">*</button>
+                    <button onclick="press('1')">1</button>
+                    <button  onclick="press('2')">2</button>
+                    <button  onclick="press('3')">3</button>
+                    <button  onclick="press('-')">-</button>
+                    <button  onclick="press('0')">0</button>
+                    <button  onclick="clearAll()">C</button>
+                    <button  onclick="calculate()">=</button>
+                    <button onclick="press('+')">+</button>
                 </div>
     </div>
+    <script>
+    let expression = "";
+
+    function press(value) {
+        expression += value;
+        document.getElementById("display").value = expression;
+    }
+
+    function calculate() {
+        try {
+            expression = eval(expression);
+            document.getElementById("display").value = expression;
+        } catch (e) {
+            document.getElementById("display").value = "Error";
+            expression = "";
+        }
+    }
+
+    function clearAll() {
+        expression = "";
+        document.getElementById("display").value = "";
+    }
+</script>
+
 </body>
 </html>
