@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="container">Hi there</p>
+    <button id="b" onclick="changeText()">Click me</button>
+</body>
+</html>
+<script>
+    let container=document.getElementById("container");
+  let button=document.getElementById("b");
+    let keyfunction=false;
+    button.onclick=function(){
+        keyfunction=true;
+        container.textContent="Hi";
+    }
+
+  document.addEventListener("keydown",function(event){
+    if(keyfunction){
+        message.textContent=`You pressed :${event.key}`;
+    }
+  })
+</script>

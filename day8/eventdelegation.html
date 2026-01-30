@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <div id="parent" style="height:200px; width:200px; background-color:blue; display:flex; justify-content:center; align-items:center;">
+                   
+         
+            <div id="child" style="height:100px; width:100px; background-color:rgb(12, 253, 28)">
+
+                    </div>
+        </div>
+</body>
+</html>
+<script>
+    let parent=document.querySelector(".parent");
+    let child=parent.children;
+    console.log(child)
+    /*parent.addEventListener('click',()=>{
+        event.stopPropagation();
+        alert("parent");
+    })
+       child.addEventListener('click',()=>{
+        event.stopPropagation();
+        alert("child");
+    },false)*/
+</script>
+
