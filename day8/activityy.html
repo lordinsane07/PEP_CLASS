@@ -7,21 +7,23 @@
 </head>
 <body>
     <p id="container">Hi there</p>
-    <button id="b" onclick="changeText()">Click me</button>
+    <button id="b">Click me</button>
+
+<script>
+const container = document.getElementById("container");
+const button = document.getElementById("b");
+
+function handleKeydown(event) {
+    container.textContent = `You pressed: ${event.key}`;
+}
+
+button.addEventListener("click", () => {
+    container.textContent = "Now press a key";
+    document.removeEventListener("keydown", handleKeydown);
+    document.addEventListener("keydown", handleKeydown);
+});
+</script>
+
 </body>
 </html>
-<script>
-    let container=document.getElementById("container");
-  let button=document.getElementById("b");
-    let keyfunction=false;
-    button.onclick=function(){
-        keyfunction=true;
-        container.textContent="Hi";
-    }
 
-  document.addEventListener("keydown",function(event){
-    if(keyfunction){
-        message.textContent=`You pressed :${event.key}`;
-    }
-  })
-</script>

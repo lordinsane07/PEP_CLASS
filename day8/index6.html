@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="value">
+<p id="pTag" ></p>
+</body>
+</html>
+
+<script>
+       const inputtext=document.getElementById("id");
+       const pTag=document.getElementById("pTag");
+       inputtext.oninput=(a)=>{
+        console.log(a.target.value);
+        pTag.innerText=a.target.value;
+        pTag.style.color = a.target.value;
+    }
+</script>

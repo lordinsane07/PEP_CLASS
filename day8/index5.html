@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button onclick="GenerateList()">click</button>
+  <ul id="list"></ul>
+
+  <script>
+    let fruits = ["apple", "banana", "orange"];
+
+    function GenerateList() {
+      const ul = document.getElementById("list");
+      //ul.innerHTML = "";
+
+      fruits.forEach((fruit) => {
+        const li = document.createElement("li");
+        li.innerText = fruit;
+        ul.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>
